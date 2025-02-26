@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "./button";
+import { BatmanLogo } from "./batman-logo";
 
 export function HeroSection() {
   return (
@@ -13,7 +14,7 @@ export function HeroSection() {
           filter: 'brightness(0.3)'
         }}
       />
-      
+
       <div className="container relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,18 +22,28 @@ export function HeroSection() {
           transition={{ duration: 0.8 }}
           className="max-w-2xl mx-auto text-center"
         >
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ delay: 0.5, type: "spring", stiffness: 260, damping: 20 }}
+            className="flex justify-center mb-8"
+          >
+            <BatmanLogo className="w-24 h-24 text-yellow-500" />
+          </motion.div>
+
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-            Welcome to Gotham City
+            The Dark Knight Watches Over Gotham
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            Where shadows meet justice. Experience the dark allure of the city that never sleeps.
+            In a city shrouded in darkness, one hero stands between order and chaos. 
+            Experience Gotham City through the eyes of its legendary protector.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" variant="default">
-              Explore Gotham
+              Join the Watch
             </Button>
             <Button size="lg" variant="outline">
-              Learn More
+              Explore Gotham
             </Button>
           </div>
         </motion.div>
