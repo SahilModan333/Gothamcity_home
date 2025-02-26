@@ -5,16 +5,11 @@ export function BatSignal(props: SVGProps<SVGSVGElement>) {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
+      fill="currentColor"
+      stroke="none"
       {...props}
     >
-      <path
-        d="M12 3L4 15h16L12 3zm0 0v18m-8-6l8-4 8 4"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
+      <path d="M12 2L5 12h14L12 2zm0 12c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6.92 4c.05.39.92 4 6.92 4s6.87-3.61 6.92-4H5.08z" />
     </svg>
   );
 }
